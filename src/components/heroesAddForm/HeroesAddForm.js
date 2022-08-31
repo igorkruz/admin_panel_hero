@@ -1,5 +1,3 @@
-
-
 // Задача для этого компонента:
 // Реализовать создание нового героя с введенными данными. Он должен попадать
 // в общее состояние и отображаться в списке + фильтроваться
@@ -23,16 +21,12 @@ const HeroesAddForm = () => {
     const [heroDesc, setHeroDesc] = useState('');
     const [heroElement, setHeroElement] = useState('');
 
-    const { filters, filtersLoadingStatus } = useSelector(state => state);
+    const { filters, filtersLoadingStatus } = useSelector(state => state.filters);
     const dispatch = useDispatch();
     const { request } = useHttp();
 
     const onSunbmitHendler = (e) => {
         e.preventDefault();
-        
-          // Можно сделать и одинаковые названия состояний,
-        // хотел показать вам чуть нагляднее
-        // Генерация id через библиотеку
 
         const newHero = {
             id: uuidv4,
@@ -41,15 +35,15 @@ const HeroesAddForm = () => {
             element: heroElement
         }
             
-        // Отправляем данные на сервер в формате JSON
-        // ТОЛЬКО если запрос успешен - отправляем персонажа в store
+        // Відправлення даних насервер в форматі JSON
+        // Тільки якщо запит успісний відправляємо песонажа в store
 
         request("http://localhost:3001/heroes", "POST", JSON.stringify(newHero))
             .then(res => console.log(res, 'complete'))
             .then(dispatch(heroCreated(newHero)))
             .catch(err=> console.log(err))
 
-        // Очищаем форму после отправки
+        // Очищаєм форму після відправки
 
         setHeroName('')
         setHeroDesc('')
@@ -61,7 +55,7 @@ const HeroesAddForm = () => {
         if (status === 'loading') {
             return <option>Загрузка елемментів</option>
         } else if (status === 'error') {
-            return <option>Сталась помилка</option>
+            return <option>Сталась помилка</option> 
         }
         
         // якщо є фільтер то рендери
