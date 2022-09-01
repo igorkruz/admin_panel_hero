@@ -1,7 +1,9 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
+import ReduxThunk from 'redux-thunk'
 
 import filters from '../reducers/filters';
 import heroes from '../reducers/heroes';
+
                 // ({dispatch, getState})
 const customMiddleware = () => (next) => (action) => {
                                 // (dispatch)
@@ -13,31 +15,37 @@ const customMiddleware = () => (next) => (action) => {
     return next(action)
 }
 
-const enhancer = (createStore) => (...args) => {
-    const store = createStore(...args);
-
-    const oldDispatch = store.dispatch;
-
-    store.dispatch = (actions) => {
-        if (typeof actions === 'string') {
-            return oldDispatch({
-                type: actions
-            })
-        }
-        return oldDispatch(actions)
-    }
-    return store;
-}
-
 const store = createStore(
     combineReducers({ heroes, filters }),
-    compose(applyMiddleware(customMiddleware),
+    compose(applyMiddleware(ReduxThunk, customMiddleware),
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 );
+
+
+// compose with enhancer and DevTools
 // compose(
 //     enhancer,
 //     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 // ));
+
+
+// function enhancer
+// const enhancer = (createStore) => (...args) => {
+    //     const store = createStore(...args);
+    
+    //     const oldDispatch = store.dispatch;
+    
+    //     store.dispatch = (actions) => {
+    //         if (typeof actions === 'string') {
+    //             return oldDispatch({
+    //                 type: actions
+    //             })
+    //         }
+    //         return oldDispatch(actions)
+    //     }
+    //     return store;
+    // }
+    
 
 export default store;
 

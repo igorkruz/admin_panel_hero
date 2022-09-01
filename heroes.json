@@ -7,10 +7,28 @@
       "id": 2
     },
     {
-      "name": "ігор",
-      "description": "dsadas",
-      "element": "water",
+      "name": "Кружинський Ігор",
+      "description": "j",
+      "element": "wind",
       "id": 3
+    },
+    {
+      "name": "dsas",
+      "description": "ew",
+      "element": "water",
+      "id": 4
+    },
+    {
+      "name": "ігор",
+      "description": "ewe",
+      "element": "earth",
+      "id": 5
+    },
+    {
+      "name": "ігорeee",
+      "description": "wew",
+      "element": "fire",
+      "id": 6
     }
   ],
   "filters": [
