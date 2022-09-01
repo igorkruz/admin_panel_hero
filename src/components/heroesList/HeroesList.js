@@ -16,7 +16,6 @@ const HeroesList = () => {
     
         (state) => state.filters.activeFilter,
         (state) => state.heroes.heroes,
-    
         (filter, heroes) => {
             if (filter === 'all') {
                 return heroes
@@ -28,14 +27,6 @@ const HeroesList = () => {
         
     )
 
-    // const filteredHeroes = useSelector(state => {
-    //     if (state.filters.activeFilter === 'all') {
-    //         return state.heroes.heroes
-    //     } else {
-    //         return state.heroes.heroes.filter(item => item.element === state.filters.activeFilter)
-    //     }
-    // })
-    
     const filteredHeroes = useSelector(filteredHeroesSelector);
     const heroesLoadingStatus = useSelector(state => state.heroes.heroesLoadingStatus);
     const dispatch = useDispatch();
@@ -47,15 +38,17 @@ const HeroesList = () => {
         // eslint-disable-next-line
     }, []);
 
+
     // реалізація видалення при натисканні на хрестик!
     const onDelete = useCallback((id) => {
         request(`http://localhost:3001/heroes/${id}`, 'DELETE')
             .then(data => console.log(data, 'deleted'))
             .then(dispatch(heroDeleted(id)))
             .catch(err => console.log(err));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
     },[request])
 
+    
     if (heroesLoadingStatus === "loading") {
         return <Spinner/>;
     } else if (heroesLoadingStatus === "error") {
@@ -78,7 +71,7 @@ const HeroesList = () => {
                 <CSSTransition
                     key={id}
                     timeout={500}
-                    classNames='herro'>
+                    classNames='hero'>
                         <HeroesListItem  {...props} onDelete={()=> onDelete(id) } />
                 </CSSTransition>
             )

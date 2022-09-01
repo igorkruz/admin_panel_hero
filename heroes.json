@@ -2,33 +2,45 @@
   "heroes": [
     {
       "name": "Кружинський Ігор",
-      "description": "fdfs",
-      "element": "fire",
-      "id": 2
-    },
-    {
-      "name": "Кружинський Ігор",
-      "description": "j",
+      "description": "jjj",
       "element": "wind",
-      "id": 3
+      "id": 12
     },
     {
-      "name": "dsas",
-      "description": "ew",
+      "name": "sdasdasddasd",
+      "description": "dasdasdsa",
       "element": "water",
-      "id": 4
+      "id": 17
     },
     {
-      "name": "ігор",
-      "description": "ewe",
-      "element": "earth",
-      "id": 5
-    },
-    {
-      "name": "ігорeee",
-      "description": "wew",
+      "name": "sadasd",
+      "description": "dsadasdas",
       "element": "fire",
-      "id": 6
+      "id": 18
+    },
+    {
+      "name": "fdsf",
+      "description": "fsdfs",
+      "element": "wind",
+      "id": 19
+    },
+    {
+      "name": "fsdfsdf",
+      "description": "fdsfsdf",
+      "element": "wind",
+      "id": 20
+    },
+    {
+      "name": "a",
+      "description": "d",
+      "element": "fire",
+      "id": 21
+    },
+    {
+      "name": "ml,l",
+      "description": "mkmkm",
+      "element": "fire",
+      "id": 22
     }
   ],
   "filters": [
