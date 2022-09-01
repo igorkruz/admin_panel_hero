@@ -1,16 +1,16 @@
 {
   "heroes": [
     {
-      "name": "dasdasddsadas",
-      "description": "fsdfsdfsd",
-      "element": "fire",
-      "id": 1
-    },
-    {
       "name": "Кружинський Ігор",
       "description": "fdfs",
       "element": "fire",
       "id": 2
+    },
+    {
+      "name": "ігор",
+      "description": "dsadas",
+      "element": "water",
+      "id": 3
     }
   ],
   "filters": [
