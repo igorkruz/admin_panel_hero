@@ -63,33 +63,33 @@ const HeroesAddForm = () => {
     return (
         <form className="border p-4 shadow-lg rounded" onSubmit={onSunbmitHendler}>
             <div className="mb-3">
-                <label htmlFor="name" className="form-label fs-4">Имя нового героя</label>
+                <label htmlFor="name" className="form-label fs-4">The name of the new hero</label>
                 <input 
                     required
                     type="text"
                     name="name"
                     className="form-control"
                     id="name"
-                    placeholder="Как меня зовут?"
+                    placeholder="What's my name?"
                     value={heroName}
                     onChange={ (e) => setHeroName(e.target.value)  } />
             </div>
 
             <div className="mb-3">
-                <label htmlFor="text" className="form-label fs-4">Описание</label>
+                <label htmlFor="text" className="form-label fs-4">Description</label>
                 <textarea
                     required
                     name="text"
                     className="form-control"
                     id="text"
-                    placeholder="Что я умею?"
+                    placeholder="What can I do?"
                     style={{ "height": '130px' }}
                     value={heroDesc}
                     onChange={ (e) => setHeroDesc(e.target.value) } />
             </div>
 
             <div className="mb-3">
-                <label htmlFor="element" className="form-label">Выбрать элемент героя</label>
+                <label htmlFor="element" className="form-label">Choose a hero element</label>
                 <select 
                     required
                     className="form-select"
@@ -97,13 +97,13 @@ const HeroesAddForm = () => {
                     name="element"
                     value={heroElement}
                     onChange={(e)=> setHeroElement(e.target.value)}>
-                    <option >Я владею элементом...</option>
+                    <option >My superpower is...</option>
                     {renderFilters(filters, filtersLoadingStatus)}
                     
                 </select>
             </div>
 
-            <button type="submit" className="btn btn-primary">Создать</button>
+            <button type="submit" className="btn btn-primary">Create</button>
         </form>
     )
 }

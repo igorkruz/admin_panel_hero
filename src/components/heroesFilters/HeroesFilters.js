@@ -21,12 +21,12 @@ const HeroesFilters = () => {
     if (filtersLoadingStatus === 'loading') {
         return <Spinner />
     } else if (filtersLoadingStatus === 'error') {
-        return <h5 className='text-center mt-5'>Помилка загрузки</h5>
+        return <h5 className='text-center mt-5'>Loading error</h5>
     }
 
     const renderFilters = (arr) => {
         if (arr.length === 0) {
-            return <h5 className='text-center mt-5'>Фильт не знайдено</h5>
+            return <h5 className='text-center mt-5'>No filter found</h5>
         }
 
 
@@ -51,7 +51,7 @@ const HeroesFilters = () => {
     return (
         <div className="card shadow-lg mt-4">
             <div className="card-body">
-                <p className="card-text">Отфильтруйте героев по элементам</p>
+                <p className="card-text">Filter heroes by categories</p>
                 <div className="btn-group">
                     {elements}
                 </div>
