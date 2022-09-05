@@ -1,46 +1,34 @@
 {
   "heroes": [
     {
-      "name": "Кружинський Ігор",
-      "description": "jjj",
-      "element": "wind",
-      "id": 12
+      "name": "vcxvcxvvxcv",
+      "description": "czxcxz",
+      "element": "",
+      "id": 24
     },
     {
-      "name": "sdasdasddasd",
-      "description": "dasdasdsa",
-      "element": "water",
-      "id": 17
-    },
-    {
-      "name": "sadasd",
-      "description": "dsadasdas",
+      "name": "fdsfsd",
+      "description": "dsadas",
       "element": "fire",
-      "id": 18
+      "id": 25
     },
     {
-      "name": "fdsf",
-      "description": "fsdfs",
-      "element": "wind",
-      "id": 19
+      "id": "6c43af02-7da2-4a20-94d1-6a009471099f",
+      "name": "dasdas",
+      "description": "dasdas",
+      "element": "fire"
     },
     {
-      "name": "fsdfsdf",
-      "description": "fdsfsdf",
-      "element": "wind",
-      "id": 20
+      "id": "5cd7cb28-b15a-495f-a847-b0fc3a66f9f0",
+      "name": "dsadas",
+      "description": "dsasdasd",
+      "element": "water"
     },
     {
-      "name": "a",
-      "description": "d",
-      "element": "fire",
-      "id": 21
-    },
-    {
-      "name": "ml,l",
-      "description": "mkmkm",
-      "element": "fire",
-      "id": 22
+      "id": "fcb20c8b-d1a1-4eca-aeeb-0d6a7e12387d",
+      "name": "rwerwe",
+      "description": "erwrwerwe",
+      "element": ""
     }
   ],
   "filters": [
