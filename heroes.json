@@ -1,27 +1,45 @@
 {
-  "heroes": [],
+  "heroes": [
+    {
+      "id": "b40fec13-3221-4151-b748-67180ada41c6",
+      "name": "fsdfsd",
+      "description": "fsdfsdf",
+      "element": "wind"
+    },
+    {
+      "id": "7882bd7c-1ad6-46d8-abf2-288a0285c812",
+      "name": "  m,nlm;m",
+      "description": "dasdasdas",
+      "element": "wind"
+    }
+  ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "All",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Fire",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Water",
       "className": "btn-primary"
     },
     {
+      "id": "wind",
       "name": "wind",
       "label": "Wind",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Earth",
       "className": "btn-secondary"

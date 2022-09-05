@@ -2,20 +2,20 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 
-import{activeFilterChanged, fetchFilters} from './filtersSlice'
+import { activeFilterChanged, fetchFilters, selectAll } from './filtersSlice'
+import store from '../../store'
 import Spinner from '../spinner/Spinner';
 
 const HeroesFilters = () => {
 
-    const { filters, filtersLoadingStatus, activeFilter } = useSelector(state => state.filters);
+    const { filtersLoadingStatus, activeFilter } = useSelector(state => state.filters);
+    const filters = selectAll(store.getState())
     const dispatch = useDispatch();
-
-    // запит на сервер для отримання фільтрів та покрокової зміни стану
 
     useEffect(() => {
         dispatch(fetchFilters())
-        
-    // eslint-disable-next-line
+
+        // eslint-disable-next-line
     }, [])
 
     if (filtersLoadingStatus === 'loading') {
@@ -29,20 +29,19 @@ const HeroesFilters = () => {
             return <h5 className='text-center mt-5'>No filter found</h5>
         }
 
+        return arr.map(({ name, className, label }) => {
 
-        return arr.map(({name, className,label}) => {
-            
             const btnClass = classNames('btn', className, {
                 'active': name === activeFilter
             });
-            
-            return<button
-                    key={name}
-                    id={name}
-                    className={btnClass}
-                    onClick={()=> dispatch(activeFilterChanged(name))}>
-                        {label}
-                    </button>
+
+            return <button
+                key={name}
+                id={name}
+                className={btnClass}
+                onClick={() => dispatch(activeFilterChanged(name))}>
+                {label}
+            </button>
         })
     }
 
