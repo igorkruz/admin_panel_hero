@@ -1,16 +1,10 @@
 {
   "heroes": [
     {
-      "id": "b40fec13-3221-4151-b748-67180ada41c6",
-      "name": "fsdfsd",
-      "description": "fsdfsdf",
-      "element": "wind"
-    },
-    {
-      "id": "7882bd7c-1ad6-46d8-abf2-288a0285c812",
-      "name": "  m,nlm;m",
-      "description": "dasdasdas",
-      "element": "wind"
+      "id": "fa450371-59c4-4f21-88ea-d78f12b5ca3e",
+      "name": "dvfsdfs",
+      "description": "asfasfad",
+      "element": "water"
     }
   ],
   "filters": [
